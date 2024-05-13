@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <div>
+        <img src="{{ thumbnail_url }}" alt="Book Cover" style="max-width: 200px;"><br><br>
+        <strong>Title:</strong> {{ title }}<br>
+        <strong>Authors:</strong> {{ authors }}<br>
+        <strong>Page Count:</strong> {{ page_count }}<br>
+        <strong>Average Rating:</strong> {{ average_rating }}<br>
+    </div>
+    <form action="/add_book/{{ username }}" method="post">
+        <input type="hidden" name="title" value="{{ title }}">
+        <button type="submit">Add to My Books</button>
+    </form>
+</body>
+</html>
+
+</body>
+</html>
